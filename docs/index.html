@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<title>Magazine Editor v0.2.21</title>
+<title>Magazine Editor v0.3.0</title>
 <style>
   :root { --bg:#fefefd; --panel:#f5f5f3; --ink:#333; --muted:#6b5f5e; --accent:#4a3b3a; --warn:#c0392b; }
   * { box-sizing: border-box; }
@@ -88,7 +88,7 @@
   <a class="site-logo" href="https://t-arg.github.io/" title="TEAM a.r.g." target="_blank" rel="noopener noreferrer">
     <img src="data:image/gif;base64,R0lGODlheQAuAMIFAEc8Okg8OUY9Nk5BPv7+/P///////////yH+EUNyZWF0ZWQgd2l0aCBHSU1QACH5BAEKAAcALAAAAAB5AC4AAAP+eHrRHivKSau9OOudA/kf4HBkaZ5PCnEe6DrDKc/z0LpfEG83DqrAxo5GNNk+tkduiOklB74oTheswipJq5CSvSqOBHDux7T0WjCptKeO6iTJ9uu9EJMP4Dz0XKacpw8DXYFyhXR4bIUEh4lLLWINi1N9En9hUIBrSFoqmItfTlaeizF5aZJhjR6Cd2Yve6o4rDqoiks5iCBxakJkjze0m7qeHr24ri9twTlopLY/uDd2ysGRtbdiT2OLwILeOw5Tco2oy4q0VMLPzrqJ6T/h13MPCsU4AIMpAFL428/Fj/b5+KYJWhSBLkQY9BGpGKJp8v75wyGgokUBY6w16jL+ioy6dRPn2LDBgBtDkAbNwUshyF6qgSpcsCoHciY5ew0Y7Hp1aV01W+EAMgQyZwzEcc3cjMzZ0I1JnyF5WXspa+rNeCifDpUEQchUeMy+AopHzg0adw3fwTxqi61XkgA7ivjmDaEsb2jsUvu4UslBrFnL4uyapSqQjn3RIA7rV2HWTWJBkptLZQFAYFrWYL3KUi1Kv48jQua2AJ+xVEDm8tv8zLRZ0DAD6I3KSzOVFfVEnA3CjTNYoJFjvlZV9qRZESIipOhNFHDR38DHwp5H3J3T4TmVB+XNbHYOux4AeL+eODIB3Y3Q34uFfYKSKiuZPTe6mLkD9ETlM8YeP1P+e/foISebPOHMtBBXux2Wj3A92cfJfvKZx41ufsDHxnYQMsbJdvnpt6EVw4imYQWylShgdeLFlOCDCN6X4gMvarHPgwMKJiCJ8A1loYYf2lfeh5dlJqJ9OHKnY3M8inLEckkK1xyQto1QSYp03YddGsg5qANdg1xioJaBrJiWV1S0NF1f7kUyI2bBWRgJlwseKROceM35zSp7tMSNmebRU0lYjOkpHSFbFhfaY+OBIB6fR1ZSTGG3pTgojIvECOSlmLJ4Hj47LUGSZUFyqF+TsPAYJTVnUscgczsJYYef9Ty1HIMs1XlbGUFol6ujuxaJGwOmYQaJH6TAkA6DVQbN1YWuQIBaBbPNkvjErwzcBl1X9JiyCjN4GXpMmlbUE8ggzm65LIkvVBAsQ8Cet4K2jkDXxqe8unpuCqBIGUgd3iDzLQUC5BMDTnUIhAk+JT1aBXgVSlltdviKSwesGwwgEMIo/BABJOBo7O8n4Gb38AoRVzsErCpY8EQNXtTRchaUuLxEw0Hs0G3JeJgp8ZZF9HzCyjRHqx259VLs89E915rFyNUiMgI9uRqN9NQsoMxUNO8+jXXKaFDtNQl08VvKFoKI7XQpcJ79tQQJAAA7" alt="TEAM a.r.g.">
   </a>
-  <h1>Magazine Editor <span style="color:#6b5f5e;font-weight:500">v0.2.21</span></h1>
+  <h1>Magazine Editor <span style="color:#6b5f5e;font-weight:500">v0.3.0</span></h1>
   <select id="pageKind">
     <option value="blank">Blank page</option>
     <option value="cover">Cover</option>
@@ -104,6 +104,8 @@
   <input id="fileOpen" type="file" accept=".json,.mag.json,application/json" hidden>
   <button id="btnPdf" type="button">Export PDF</button>
   <button id="btnEpub" type="button">Export EPUB</button>
+  <button id="btnPng" type="button">Export PNG</button>
+  <button id="btnHelp" type="button" class="ghost">? Help</button>
   <div class="bmc-slot">
     <a class="bmc" href="https://buymeacoffee.com/TEAMarg" target="_blank" rel="noopener noreferrer">Cool tool? Buy us a coffee</a>
     <a class="bmc" href="https://paypal.me/TEAMargJO3RI" target="_blank" rel="noopener noreferrer" title="Donate with PayPal"><svg class="pp-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.93 4.778-4.005 7.201-9.138 7.201h-2.19a.563.563 0 0 0-.556.479l-1.187 7.527h-.506l-.24 1.516a.56.56 0 0 0 .554.647h3.882c.46 0 .85-.334.922-.788.06-.26.76-4.852.816-5.09a.932.932 0 0 1 .923-.788h.58c3.76 0 6.705-1.528 7.565-5.946.36-1.847.174-3.388-.777-4.471z"/></svg>Donate with PayPal</a>
@@ -187,6 +189,54 @@
   <div class="textpop-bar" id="textPopBar"><span>Text</span><button id="textPopClose" type="button">Close</button></div>
   <div class="rt-tools row" id="textTools"><select id="popFont" style="min-width:140px"></select><button type="button" data-cmd="bold"><b>B</b></button><button type="button" data-cmd="italic"><i>I</i></button><button type="button" data-cmd="underline"><u>U</u></button><button type="button" data-cmd="strikeThrough"><s>S</s></button><button type="button" data-cmd="insertUnorderedList">List</button><button type="button" data-cmd="insertOrderedList">1.</button><button type="button" data-cmd="removeFormat">Clear</button><button type="button" data-cmd="justifyLeft">Left</button><button type="button" data-cmd="justifyCenter">Middle</button><button type="button" data-cmd="justifyRight">Right</button><button type="button" data-cmd="justifyFull">Justify</button></div>
   <div id="tx" class="rt" contenteditable="true"></div>
+</div>
+<div id="pngModal" class="modal hidden">
+  <div class="cropbox">
+    <h2>Export page as PNG</h2>
+    <p class="hint" id="pngWhich"></p>
+    <div class="row"><label>Paper size</label><select id="pngSize">
+      <option value="A6">A6 (105 x 148 mm)</option>
+      <option value="A5">A5 (148 x 210 mm)</option>
+      <option value="A4" selected>A4 (210 x 297 mm)</option>
+      <option value="A3">A3 (297 x 420 mm)</option>
+      <option value="Letter">US Letter (215.9 x 279.4 mm)</option>
+      <option value="page">Same as magazine page</option>
+      <option value="custom">Custom width in pixels</option>
+    </select></div>
+    <div class="row"><label>Resolution</label><select id="pngDpi">
+      <option value="72">72 dpi (screen)</option>
+      <option value="150">150 dpi</option>
+      <option value="300" selected>300 dpi (print)</option>
+      <option value="600">600 dpi</option>
+    </select></div>
+    <div class="row" id="pngCustomRow" style="display:none"><label>Width px</label><input id="pngCustomW" type="number" min="100" max="8000" value="1200" style="width:90px"></div>
+    <div class="row"><label>Grid</label><span class="hint">Grid and bleed line are never in the PNG.</span></div>
+    <p class="hint" id="pngInfo"></p>
+    <div class="row"><button id="pngGo" type="button">Download PNG</button><button id="pngCancel" type="button" class="ghost">Cancel</button></div>
+  </div>
+</div>
+<div id="helpModal" class="modal hidden">
+  <div class="cropbox" style="width:min(640px,94vw);max-height:86vh;overflow:auto">
+    <h2>Magazine Editor help <span style="font-weight:500">v0.3.0</span></h2>
+    <div style="font-size:13px;line-height:1.5">
+    <h3>Start</h3>
+    <p>Set the magazine name, issue, date and page size on the left. Add pages (Blank, Cover, Backside, Article, Index), then add blocks and drag them into place. Everything is saved automatically in your browser; use Save JSON for a real backup file.</p>
+    <h3>Pages</h3>
+    <p>Duplicate, delete, move Up/Down, give a page a label, switch the page number on or off and pick a background colour. A cover image can be dragged and zoomed to fill the page. View: 1 page or 2-page spread, zoom 40 to 160%.</p>
+    <h3>Blocks</h3>
+    <p>Text, Title, Image, Table, Shape, Index and Rotated text. Drag to move, use the corner handle to resize. Blocks snap to the grid (size in mm in the settings). The red line shows the bleed edge. The Layers list sets the order, top is front. The right panel (Inspector) shows the selected block.</p>
+    <h3>Text</h3>
+    <p>Open a text block to edit it: bold, italic, underline, strike, lists, alignment and 15 font choices. Fonts come from your system and are not embedded.</p>
+    <h3>Index</h3>
+    <p>Tick "Index title" on a text block, add an Index block and press "Rebuild index". EPUB links to those pages, PDF prints the page numbers.</p>
+    <h3>Save and open</h3>
+    <p>Save JSON writes one .mag.json file with all text and images. Open reads it back.</p>
+    <h3>Export</h3>
+    <p><b>PDF</b> and <b>EPUB</b> export the whole magazine. <b>PNG</b> exports the page you have selected as an image, for example for a web gallery: choose A6, A5, A4, A3, US Letter, the magazine page size or a custom pixel width, and 72, 150, 300 or 600 dpi. A4 at 300 dpi is 2480 x 3508 px. The height follows the magazine page shape. The PNG has no grid and no bleed line.</p>
+    <p class="hint">Very large combinations (such as A3 at 600 dpi) can be refused by the browser. Use 300 dpi instead.</p>
+    </div>
+    <div class="row"><button id="helpClose" type="button">Close</button></div>
+  </div>
 </div>
 <div id="cropModal" class="modal hidden">
   <div class="cropbox">
@@ -985,9 +1035,9 @@ function wrapLines(ctx, text, maxW) {
   });
   return lines;
 }
-async function paintPage(p, pageIndex) {
+async function paintCanvas(p, pageIndex, dpi) {
   const sz = pageSize();
-  const dpi = 110;
+  const k = dpi / 110;
   const w = Math.round(sz.w / 25.4 * dpi);
   const h = Math.round(sz.h / 25.4 * dpi);
   const canvas = document.createElement("canvas");
@@ -1052,7 +1102,7 @@ async function paintPage(p, pageIndex) {
       else if (kind === "arrow-right") { ctx.moveTo(x, y + bh * 0.3); ctx.lineTo(x + bw * 0.6, y + bh * 0.3); ctx.lineTo(x + bw * 0.6, y + bh * 0.1); ctx.lineTo(x + bw, y + bh * 0.5); ctx.lineTo(x + bw * 0.6, y + bh * 0.9); ctx.lineTo(x + bw * 0.6, y + bh * 0.7); ctx.lineTo(x, y + bh * 0.7); ctx.closePath(); }
       else ctx.rect(x, y, bw, bh);
       if (!(b.noFill || b.fill === "none")) { ctx.fillStyle = b.fill || "#f4d35e"; ctx.fill(); }
-      if ((b.strokeWidth == null ? 2 : +b.strokeWidth) > 0) { ctx.strokeStyle = b.stroke || "#4a3b3a"; ctx.lineWidth = +b.strokeWidth || 2; ctx.stroke(); }
+      if ((b.strokeWidth == null ? 2 : +b.strokeWidth) > 0) { ctx.strokeStyle = b.stroke || "#4a3b3a"; ctx.lineWidth = (+b.strokeWidth || 2) * k; ctx.stroke(); }
       ctx.restore();
       continue;
     }
@@ -1061,9 +1111,9 @@ async function paintPage(p, pageIndex) {
       const cols = rows[0] ? rows[0].cells.length : 1;
       const rh = bh / Math.max(1, rows.length);
       const cw = bw / Math.max(1, cols);
-      ctx.lineWidth = Math.max(1, b.borderWidth || 1);
+      ctx.lineWidth = Math.max(1, b.borderWidth || 1) * k;
       ctx.strokeStyle = b.border || "#4a3b3a";
-      ctx.font = canvasFont(b.font, 13);
+      ctx.font = canvasFont(b.font, 13 * k);
       ctx.fillStyle = b.color || "#333";
       ctx.textBaseline = "top";
       rows.forEach((row, ri) => {
@@ -1073,7 +1123,7 @@ async function paintPage(p, pageIndex) {
           ctx.fillRect(cx, cy, cw, rh);
           ctx.strokeRect(cx, cy, cw, rh);
           ctx.fillStyle = "#333";
-          ctx.fillText(cell.text || "", cx + 4, cy + 4, cw - 8);
+          ctx.fillText(cell.text || "", cx + 4 * k, cy + 4 * k, cw - 8 * k);
         });
       });
       continue;
@@ -1119,6 +1169,10 @@ async function paintPage(p, pageIndex) {
     ctx.fillText(String(pageIndex + 1).padStart(2, "0"), w / 2, h * 0.97);
     ctx.textAlign = "left";
   }
+  return canvas;
+}
+async function paintPage(p, pageIndex) {
+  const canvas = await paintCanvas(p, pageIndex, 110);
   return b64ToBytes(canvas.toDataURL("image/jpeg", 0.9).split(",")[1]);
 }
 async function exportPdf() {
@@ -1354,14 +1408,60 @@ document.getElementById("btnOpen").onclick = () => document.getElementById("file
 document.getElementById("fileOpen").onchange = e => { openFile(e.target.files[0]); e.target.value = ""; };
 document.getElementById("btnPdf").onclick = () => exportPdf().catch(err => setStatus(err.message || "PDF failed"));
 document.getElementById("btnEpub").onclick = () => exportEpub().catch(err => setStatus(err.message || "EPUB failed"));
+
+const PNG_SIZES = { A6:{w:105,h:148}, A5:{w:148,h:210}, A4:{w:210,h:297}, A3:{w:297,h:420}, Letter:{w:215.9,h:279.4} };
+function pngDims() {
+  const sz = pageSize();
+  const kind = document.getElementById("pngSize").value;
+  const dpi = +document.getElementById("pngDpi").value;
+  let w;
+  if (kind === "custom") w = Math.round(+document.getElementById("pngCustomW").value || 1200);
+  else w = Math.round((kind === "page" ? sz.w : PNG_SIZES[kind].w) / 25.4 * dpi);
+  return { w, h: Math.round(w * sz.h / sz.w), dpi, kind };
+}
+function pngUpdate() {
+  const d = pngDims();
+  document.getElementById("pngCustomRow").style.display = d.kind === "custom" ? "" : "none";
+  document.getElementById("pngDpi").disabled = d.kind === "custom";
+  const mp = (d.w * d.h / 1e6).toFixed(1);
+  document.getElementById("pngInfo").textContent = "Result: " + d.w + " x " + d.h + " px (" + mp + " megapixels)" + (d.w * d.h > 80e6 || d.w > 12000 || d.h > 12000 ? ". Too large, pick a smaller size or lower dpi." : "");
+  document.getElementById("pngGo").disabled = d.w * d.h > 80e6 || d.w > 12000 || d.h > 12000 || d.w < 50;
+}
+function openPngDialog() {
+  readMeta();
+  if (!mag.pages.length) { setStatus("Add a page first."); return; }
+  const p = currentPage();
+  document.getElementById("pngWhich").textContent = "Page " + (selPage + 1) + " of " + mag.pages.length + (p && p.label ? " (" + p.label + ")" : "") + ". Click a page first to export a different one.";
+  pngUpdate();
+  document.getElementById("pngModal").classList.remove("hidden");
+}
+async function exportPng() {
+  const d = pngDims();
+  const p = currentPage();
+  document.getElementById("pngModal").classList.add("hidden");
+  setStatus("Building PNG...");
+  const canvas = await paintCanvas(p, selPage, d.w / (pageSize().w / 25.4));
+  const blob = await new Promise(res => canvas.toBlob(res, "image/png"));
+  if (!blob) throw new Error("PNG too large for this browser. Try a lower dpi.");
+  const tag = d.kind === "custom" ? d.w + "px" : d.kind + "-" + d.dpi + "dpi";
+  download(slug(mag.name) + "-page" + String(selPage + 1).padStart(2, "0") + "-" + tag + ".png", blob);
+  setStatus("PNG exported (" + d.w + " x " + d.h + " px).", true);
+}
+['pngSize','pngDpi','pngCustomW'].forEach(i => { document.getElementById(i).oninput = pngUpdate; document.getElementById(i).onchange = pngUpdate; });
+document.getElementById("btnPng").onclick = openPngDialog;
+document.getElementById("pngCancel").onclick = () => document.getElementById("pngModal").classList.add("hidden");
+document.getElementById("pngGo").onclick = () => exportPng().catch(err => setStatus(err.message || "PNG failed"));
+document.getElementById("btnHelp").onclick = () => document.getElementById("helpModal").classList.remove("hidden");
+document.getElementById("helpClose").onclick = () => document.getElementById("helpModal").classList.add("hidden");
 document.addEventListener("keydown", e => {
+  if (e.key === "Escape") document.querySelectorAll("#pngModal,#helpModal").forEach(m => m.classList.add("hidden"));
   if (e.key === "Delete" && selected() && document.activeElement.tagName !== "INPUT" && document.activeElement.tagName !== "TEXTAREA") {
     const p = currentPage(); p.blocks = p.blocks.filter(b => b.id !== selBlock); selBlock = null; render(); autosave();
   }
 });
 if (!loadAutosave() || !mag.pages || !mag.pages.length) { mag = blankMag(); seed(); }
 bindMeta(); render();
-setStatus("Ready. Editing, JSON save, PDF and EPUB work offline.");
+setStatus("Ready. Editing, JSON save, PDF, EPUB and PNG work offline.");
 </script>
 </body>
 </html>
