@@ -1,6 +1,6 @@
 # Magazine Editor
 
-A simple browser editor for creating magazines, by TEAM a.r.g. Current version: **v0.3.0**.
+A simple browser editor for creating magazines, by TEAM a.r.g. Current version: **v0.3.1**.
 Open `docs/index.html` in a browser. It works offline after the first load.
 
 ## Features
@@ -16,5 +16,6 @@ Open `docs/index.html` in a browser. It works offline after the first load.
 Select a page, press **Export PNG**, pick a paper size (A6, A5, A4, A3, US Letter, same as magazine page, or custom pixel width) and a resolution (72, 150, 300, 600 dpi). A4 at 300 dpi gives 2480 x 3508 px. The height follows the shape of the magazine page. Grid and bleed line are not included. Handy for a website gallery.
 
 ## Changelog
+- v0.3.1: PNG and PDF now match the editor: text alignment (left, middle, right, justify), font sizes, bold, italic, underline, strike and lists are drawn as in the editor view.
 - v0.3.0: Export PNG (current page, choose size and dpi), in-app Help, expanded README.
 - v0.2.21: previous version.

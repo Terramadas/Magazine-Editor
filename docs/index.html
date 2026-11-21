@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-<title>Magazine Editor v0.3.0</title>
+<title>Magazine Editor v0.3.1</title>
 <style>
   :root { --bg:#fefefd; --panel:#f5f5f3; --ink:#333; --muted:#6b5f5e; --accent:#4a3b3a; --warn:#c0392b; }
   * { box-sizing: border-box; }
@@ -88,7 +88,7 @@
   <a class="site-logo" href="https://t-arg.github.io/" title="TEAM a.r.g." target="_blank" rel="noopener noreferrer">
     <img src="data:image/gif;base64,R0lGODlheQAuAMIFAEc8Okg8OUY9Nk5BPv7+/P///////////yH+EUNyZWF0ZWQgd2l0aCBHSU1QACH5BAEKAAcALAAAAAB5AC4AAAP+eHrRHivKSau9OOudA/kf4HBkaZ5PCnEe6DrDKc/z0LpfEG83DqrAxo5GNNk+tkduiOklB74oTheswipJq5CSvSqOBHDux7T0WjCptKeO6iTJ9uu9EJMP4Dz0XKacpw8DXYFyhXR4bIUEh4lLLWINi1N9En9hUIBrSFoqmItfTlaeizF5aZJhjR6Cd2Yve6o4rDqoiks5iCBxakJkjze0m7qeHr24ri9twTlopLY/uDd2ysGRtbdiT2OLwILeOw5Tco2oy4q0VMLPzrqJ6T/h13MPCsU4AIMpAFL428/Fj/b5+KYJWhSBLkQY9BGpGKJp8v75wyGgokUBY6w16jL+ioy6dRPn2LDBgBtDkAbNwUshyF6qgSpcsCoHciY5ew0Y7Hp1aV01W+EAMgQyZwzEcc3cjMzZ0I1JnyF5WXspa+rNeCifDpUEQchUeMy+AopHzg0adw3fwTxqi61XkgA7ivjmDaEsb2jsUvu4UslBrFnL4uyapSqQjn3RIA7rV2HWTWJBkptLZQFAYFrWYL3KUi1Kv48jQua2AJ+xVEDm8tv8zLRZ0DAD6I3KSzOVFfVEnA3CjTNYoJFjvlZV9qRZESIipOhNFHDR38DHwp5H3J3T4TmVB+XNbHYOux4AeL+eODIB3Y3Q34uFfYKSKiuZPTe6mLkD9ETlM8YeP1P+e/foISebPOHMtBBXux2Wj3A92cfJfvKZx41ufsDHxnYQMsbJdvnpt6EVw4imYQWylShgdeLFlOCDCN6X4gMvarHPgwMKJiCJ8A1loYYf2lfeh5dlJqJ9OHKnY3M8inLEckkK1xyQto1QSYp03YddGsg5qANdg1xioJaBrJiWV1S0NF1f7kUyI2bBWRgJlwseKROceM35zSp7tMSNmebRU0lYjOkpHSFbFhfaY+OBIB6fR1ZSTGG3pTgojIvECOSlmLJ4Hj47LUGSZUFyqF+TsPAYJTVnUscgczsJYYef9Ty1HIMs1XlbGUFol6ujuxaJGwOmYQaJH6TAkA6DVQbN1YWuQIBaBbPNkvjErwzcBl1X9JiyCjN4GXpMmlbUE8ggzm65LIkvVBAsQ8Cet4K2jkDXxqe8unpuCqBIGUgd3iDzLQUC5BMDTnUIhAk+JT1aBXgVSlltdviKSwesGwwgEMIo/BABJOBo7O8n4Gb38AoRVzsErCpY8EQNXtTRchaUuLxEw0Hs0G3JeJgp8ZZF9HzCyjRHqx259VLs89E915rFyNUiMgI9uRqN9NQsoMxUNO8+jXXKaFDtNQl08VvKFoKI7XQpcJ79tQQJAAA7" alt="TEAM a.r.g.">
   </a>
-  <h1>Magazine Editor <span style="color:#6b5f5e;font-weight:500">v0.3.0</span></h1>
+  <h1>Magazine Editor <span style="color:#6b5f5e;font-weight:500">v0.3.1</span></h1>
   <select id="pageKind">
     <option value="blank">Blank page</option>
     <option value="cover">Cover</option>
@@ -217,7 +217,7 @@
 </div>
 <div id="helpModal" class="modal hidden">
   <div class="cropbox" style="width:min(640px,94vw);max-height:86vh;overflow:auto">
-    <h2>Magazine Editor help <span style="font-weight:500">v0.3.0</span></h2>
+    <h2>Magazine Editor help <span style="font-weight:500">v0.3.1</span></h2>
     <div style="font-size:13px;line-height:1.5">
     <h3>Start</h3>
     <p>Set the magazine name, issue, date and page size on the left. Add pages (Blank, Cover, Backside, Article, Index), then add blocks and drag them into place. Everything is saved automatically in your browser; use Save JSON for a real backup file.</p>
@@ -232,7 +232,7 @@
     <h3>Save and open</h3>
     <p>Save JSON writes one .mag.json file with all text and images. Open reads it back.</p>
     <h3>Export</h3>
-    <p><b>PDF</b> and <b>EPUB</b> export the whole magazine. <b>PNG</b> exports the page you have selected as an image, for example for a web gallery: choose A6, A5, A4, A3, US Letter, the magazine page size or a custom pixel width, and 72, 150, 300 or 600 dpi. A4 at 300 dpi is 2480 x 3508 px. The height follows the magazine page shape. The PNG has no grid and no bleed line.</p>
+    <p><b>PDF</b> and <b>EPUB</b> export the whole magazine. <b>PNG</b> exports the page you have selected as an image, for example for a web gallery: choose A6, A5, A4, A3, US Letter, the magazine page size or a custom pixel width, and 72, 150, 300 or 600 dpi. A4 at 300 dpi is 2480 x 3508 px. The height follows the magazine page shape. The PNG has no grid and no bleed line. PNG and PDF draw text the way the editor shows it (alignment, size, bold, italic, underline, strike, lists). Fonts must be installed on the computer you export from.</p>
     <p class="hint">Very large combinations (such as A3 at 600 dpi) can be refused by the browser. Use 300 dpi instead.</p>
     </div>
     <div class="row"><button id="helpClose" type="button">Close</button></div>
@@ -1035,12 +1035,123 @@ function wrapLines(ctx, text, maxW) {
   });
   return lines;
 }
+
+function paintRichText(ctx, b, x, y, bw, bh, k) {
+  const size = (b.size || 16) * k;
+  const lh = size * 1.25;
+  const fam = fontInfo(b.font).css;
+  const baseBold = (b.weight || 400) >= 700;
+  const fontOf = st => (st.i ? "italic " : "") + ((baseBold || st.b) ? "700 " : "400 ") + size + "px " + fam;
+  const paras = [];
+  let cur = null, listKind = null, listN = 0;
+  const newPara = extra => { cur = { toks: [], list: extra || null }; paras.push(cur); return cur; };
+  const ensure = () => cur || newPara();
+  const root = document.createElement("div");
+  root.innerHTML = blockHtml(b);
+  const walk = (node, st) => {
+    node.childNodes.forEach(c => {
+      if (c.nodeType === 3) {
+        const txt = c.textContent.replace(/\u00a0/g, " ");
+        txt.split(/(\n| )/).forEach(part => {
+          if (part === "") return;
+          if (part === "\n") ensure().toks.push({ t: "br" });
+          else if (part === " ") ensure().toks.push({ t: "sp", st });
+          else ensure().toks.push({ t: "w", text: part, st });
+        });
+      } else if (c.nodeType === 1) {
+        const tag = c.tagName;
+        if (tag === "BR") { ensure().toks.push({ t: "br" }); return; }
+        const ns = { b: st.b || tag === "B" || tag === "STRONG", i: st.i || tag === "I" || tag === "EM", u: st.u || tag === "U", s: st.s || tag === "S" || tag === "STRIKE" };
+        if (tag === "UL" || tag === "OL") {
+          const prev = [listKind, listN];
+          listKind = tag; listN = 0; cur = null;
+          paras.push({ toks: [], spacer: true });
+          walk(c, ns);
+          cur = null; paras.push({ toks: [], spacer: true });
+          listKind = prev[0]; listN = prev[1];
+        } else if (tag === "LI") {
+          listN++; newPara({ kind: listKind || "UL", n: listN }); walk(c, ns); cur = null;
+        } else if (tag === "DIV" || tag === "P") {
+          cur = null; newPara(); walk(c, ns); cur = null;
+        } else walk(c, ns);
+      }
+    });
+  };
+  walk(root, { b: false, i: false, u: false, s: false });
+  ctx.save();
+  ctx.beginPath(); ctx.rect(x, y, bw, bh); ctx.clip();
+  ctx.fillStyle = b.color || "#333";
+  ctx.textBaseline = "alphabetic";
+  ctx.font = fontOf({});
+  const m0 = ctx.measureText("Hg");
+  const asc = m0.fontBoundingBoxAscent || size * 0.8, desc = m0.fontBoundingBoxDescent || size * 0.2;
+  const align = b.align || "left";
+  let cy = y;
+  const wOf = (t, st) => { ctx.font = fontOf(st); return ctx.measureText(t).width; };
+  paras.forEach(para => {
+    if (para.spacer) { cy += size; return; }
+    const indent = para.list ? 40 * k : 0;
+    const avail = Math.max(10, bw - indent);
+    // trailing <br> in a block does not add an empty line
+    const toks = para.toks.slice();
+    if (toks.length && toks[toks.length - 1].t === "br" && !para.list) toks.pop();
+    const lines = [];
+    let line = { items: [], w: 0, hard: false };
+    const flush = hard => { line.hard = hard; lines.push(line); line = { items: [], w: 0, hard: false }; };
+    // group into words (word + attached spaces stay separate tokens)
+    toks.forEach(tk => {
+      if (tk.t === "br") { flush(true); return; }
+      const wdt = tk.t === "sp" ? wOf(" ", tk.st) : wOf(tk.text, tk.st);
+      if (tk.t === "w" && line.items.length && line.w + wdt > avail) {
+        // move trailing spaces to line end (hang) and wrap
+        while (line.items.length && line.items[line.items.length - 1].t === "sp") { const sp = line.items.pop(); line.w -= sp.w; }
+        flush(false);
+      }
+      line.items.push({ t: tk.t, text: tk.text, st: tk.st, w: wdt });
+      line.w += wdt;
+    });
+    flush(true);
+    if (lines.length > 1 || lines[0].items.length || true) {
+      lines.forEach((ln, li) => {
+        const items = ln.items.slice();
+        let trimmed = ln.w;
+        while (items.length && items[items.length - 1].t === "sp") { trimmed -= items.pop().w; }
+        const baseY = cy + (lh - (asc + desc)) / 2 + asc;
+        if (para.list && li === 0 && cy + lh > y) {
+          ctx.font = fontOf({}); ctx.fillStyle = b.color || "#333";
+          const mk = para.list.kind === "OL" ? para.list.n + "." : "\u2022";
+          ctx.fillText(mk, x + indent - ctx.measureText(mk + " ").width, baseY);
+        }
+        let tx = x + indent, extra = 0;
+        if (align === "center") tx += (avail - trimmed) / 2;
+        else if (align === "right") tx += avail - trimmed;
+        else if (align === "justify" && !ln.hard && li < lines.length - 1) {
+          const sps = items.filter(i => i.t === "sp").length;
+          if (sps) extra = (avail - trimmed) / sps;
+        }
+        items.forEach(it => {
+          const iw = it.w + (it.t === "sp" ? extra : 0);
+          if (it.t === "w") {
+            ctx.font = fontOf(it.st); ctx.fillStyle = b.color || "#333";
+            ctx.fillText(it.text, tx, baseY);
+          }
+          const lw = Math.max(1, size / 14);
+          if (it.st && it.st.u) ctx.fillRect(tx, baseY + size * 0.12, iw, lw);
+          if (it.st && it.st.s) ctx.fillRect(tx, baseY - size * 0.3, iw, lw);
+          tx += iw;
+        });
+        cy += lh;
+      });
+    }
+  });
+  ctx.restore();
+}
 async function paintCanvas(p, pageIndex, dpi) {
   const sz = pageSize();
-  const k = dpi / 110;
   const w = Math.round(sz.w / 25.4 * dpi);
   const h = Math.round(sz.h / 25.4 * dpi);
   const canvas = document.createElement("canvas");
+  const k = w / (sz.w * 3.2);
   canvas.width = w; canvas.height = h;
   const ctx = canvas.getContext("2d");
   ctx.fillStyle = p.bg || "#ffffff";
@@ -1054,7 +1165,7 @@ async function paintCanvas(p, pageIndex, dpi) {
     if (b.type === "rottext") {
       ctx.save();
       ctx.fillStyle = b.color || "#333";
-      const size = Math.max(8, (b.size || 16) * (w / 794));
+      const size = Math.max(8, (b.size || 16) * k);
       ctx.font = canvasFont(b.font, size);
       ctx.textBaseline = "middle";
       ctx.translate(x + bw / 2, y + bh / 2);
@@ -1068,8 +1179,8 @@ async function paintCanvas(p, pageIndex, dpi) {
     }
     if (b.type === "index") {
       const entries = indexEntries();
-      const titleSize = Math.max(8, (b.titleSize || 16) * (w / 794));
-      const numberSize = Math.max(8, (b.numberSize || 14) * (w / 794));
+      const titleSize = Math.max(8, (b.titleSize || 16) * k);
+      const numberSize = Math.max(8, (b.numberSize || 14) * k);
       const rowH = Math.max(titleSize, numberSize) * 1.45;
       ctx.textBaseline = "top";
       entries.forEach((e, i) => {
@@ -1144,21 +1255,7 @@ async function paintCanvas(p, pageIndex, dpi) {
       ctx.drawImage(img, sx, sy, sw, sh, x + (bw - dw) / 2, y + (bh - dh) / 2, dw, dh);
       ctx.restore();
     } else if (b.type === "text") {
-      const font = fontInfo(b.font).canvas;
-      const size = Math.max(8, (b.size || 16) * (w / 794));
-      ctx.fillStyle = b.color || "#222";
-      ctx.textBaseline = "top";
-      const plain = (b.text || "").replace(/\u00a0/g, " ");
-      ctx.font = canvasFont(b.font, size, b.weight, b.italic);
-      wrapLines(ctx, plain, bw).forEach((line, i) => {
-        if (i * size * 1.25 >= bh) return;
-        let tx = x;
-        const lw = ctx.measureText(line).width;
-        if (b.align === "center") tx = x + (bw - lw) / 2;
-        if (b.align === "right") tx = x + bw - lw;
-        ctx.fillText(line, tx, y + i * size * 1.25);
-        if (b.html && /<u[ >]/i.test(b.html)) { ctx.fillRect(tx, y + i * size * 1.25 + size, lw, Math.max(1, size / 14)); }
-      });
+      paintRichText(ctx, b, x, y, bw, bh, k);
     }
   }
   if (p.folio !== false) {
